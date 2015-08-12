@@ -1,0 +1,16 @@
+<html>
+<head>
+<script type='text/javascript' src='knockout-3.1.0.js'></script>
+</head>
+
+<body>
+    <p>First name: <strong data-bind="text: fullName"></strong></p>
+    <p>First name: <strong data-bind="text: firstName"></strong></p>
+    <p>Last name: <strong data-bind="text: lastName"></strong></p>
+    <p>Editable First name: <input data-bind="value: firstName" /></p>
+    <p>Editable Last name: <input data-bind="value: lastName"/></p>
+    <button data-bind="click: capitalizeLastName">Go caps</button
+    <br>
+</body>
+<script type='text/javascript' src='myapp.js'></script>
+</html>

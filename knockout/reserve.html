@@ -1,0 +1,35 @@
+<html>
+<head>
+<script type='text/javascript' src='knockout-3.1.0.js'></script>
+</head>
+
+<body>
+    <p>First name: <strong data-bind="text: fullName"></strong></p>
+    <p>First name: <strong data-bind="text: firstName"></strong></p>
+    <p>Last name: <strong data-bind="text: lastName"></strong></p>
+    <p>Editable First name: <input data-bind="value: firstName" /></p>
+    <p>Editable Last name: <input data-bind="value: lastName"/></p>
+    <button data-bind="click: capitalizeLastName">Go caps</button
+    <br>
+<h2>Your seat reservations</h2>
+
+<table>
+    <thead><tr>
+        <th>Passenger name</th><th>Meal</th><th>Surcharge</th><th></th>
+    </tr></thead>
+    <tbody data-bind="foreach: seats">
+        <tr>
+            <td data-bind="text: name"></td>
+            <td data-bind="text: meal().mealName"></td>
+            <td data-bind="text: meal().price"></td>
+        </tr>    
+    </tbody>
+</table>
+
+
+<hr>
+    <p>Simple Stock Exchange</p>
+    <p>Enter Symbol: <input data-bind="value: symbol" /></p>
+</body>
+<script type='text/javascript' src='myapp.js'></script>
+</html>
