@@ -57,3 +57,25 @@ rect4.prototype.perimeter =  function () {
 
 var rect4obj = new rect4(6,6);
 console.log(rect4obj.perimeter());
+/////////////////////////////////////////////////////////////////////////
+// prototypal inheritance using prototypes
+var square = Object.create(rectangle3);
+
+square.create = function(side) {
+	return rectangle3.create.call(this, side, side);
+};
+var sq = square.create(7);
+console.log(sq.perimeter());
+
+
+/////////////////////////////////////////////////////////////////////////
+// prototypal inheritance using constructors
+function square2(side) {
+	rect4.call(this, side, side);
+}
+
+square2.prototype = Object.create(rect4.prototype);
+square2.prototype.constructor = square2;
+var sq = new square2(8);
+console.log(sq.perimeter());
+/////////////////////////////////////////////////////////////////////////
